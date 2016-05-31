@@ -1,0 +1,86 @@
+server:
+  port: 15880
+appconfig:
+  jmsQueueConfigs:
+    # Placeholder JMS config - needs to be removed
+    - name: Q.IPACC.REPORTSTATS.UPDATE
+      initialContextFactoryName: com.tibco.tibjms.naming.TibjmsInitialContextFactory
+      connectionFactoryName: AppMainQueueConnectionFactory
+      destinationName: Q.IPACC.REPORTSTATS.UPDATE
+      providerURL: tibjmsnaming://inf008prda.ipacc.com:8000,tibjmsnaming://inf008prdb.ipacc.com:8000
+      securityCredentials: infinityprd
+      securityPrincipal: jndi.user
+      username: common.user1
+      password: infinityprd
+  databaseConfigs:
+    - name: Oracle_UnixProd1
+      driver: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@unixprod1-scan.ipacc.com:1521/prd1
+      username: BPM_USER
+      password: s01mpl02epassw07rd
+    - name: Oracle_UnixProd2
+      driver: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@unixprod2-scan.ipacc.com:1521/prd2
+      username: iq_close_note_svc
+      password: c105en0t45V6
+    - name: Oracle_UnixProd3
+      driver: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@unixprod3-scan.ipacc.com:1521/prd3
+      username: POLREQNSFLOG_APP_USER
+      password: icnw7dn9
+    - name: Oracle_iProcPrd
+      driver: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@iprocprd-scan.ipacc.com:1521/iprocdb.ipacc.com
+      username: swpro_stage
+      password: 1pr0cpr0d
+    # AgencyPrd
+    # StarProd1
+    # QuotePrd
+    # InqPrd
+  urls:
+    - name: Agency_2.0
+      url: https://quote.infinityagents.com
+    - name: AgencyDirect
+      url: https://agency.infinityauto.com
+    - name: AgencyFinancialEntityServiceV1
+      url: http://services-amx:15171/AgencyFinancialEntityService/V1?wsdl
+    - name: BillingFinancialEntityServiceV1
+      url: http://services-amx:15131/BillingEntityService/V1?wsdl
+    - name: CESFinancialEntityServiceV3
+      url: http://services-amx:15073/CashEntryEntityService/V3?wsdl
+    - name: FinancialValidationServiceV3
+      url: http://services-amx:15103/FinancialValidationService/V3?wsdl
+    - name: InfinityAgents
+      url: https://www.infinityagents.com
+    - name: InfinityAuto
+      url: https://www.infinityauto.com
+    - name: InfinityAuto_Connect
+      url: https://connect.infinityauto.com
+    - name: LeaderInsurance_Extranet
+      url: http://internal.leaderinsurance.com
+    - name: LeaderInsurance_PALwebsite
+      url: http://pal.leaderinsurance.com
+    - name: OLE_WebRater
+      url: https://webrater.infinityagent.com
+    - name: PaymentOptionServiceV3
+      url: http://services-amx:15083/PaymentOptionsService/V3?wsdl
+    - name: PolicyFinancialEntityServiceV1
+      url: http://services-amx:15141/PolicyFinancialEntityService/V1?wsdl
+    - name: PolicyLookupServiceV3
+      url: http://policylookupservice.ipacc.com:17380/PolicyLookupService/V3?wsdl
+    - name: PolicyLookupServiceV3_inf004prda.ipacc.com
+      url: http://inf004prda.ipacc.com:17380/PolicyLookupService/V3?wsdl
+    - name: PolicyLookupServiceV3_inf004prdb.ipacc.com
+      url: http://inf004prdb.ipacc.com:17380/PolicyLookupService/V3?wsdl
+    - name: PolicyReportSearchService - PolicySearch
+      url: http://policyreportsearch.ipacc.com:12480/services/v1/PolicySearch?wsdl
+    - name: PolicyReportSearchService - AgencyReportSearch
+      url: http://policyreportsearch.ipacc.com:12480/services/v1/AgencyReportSearch?wsdl
+    - name: PostingServiceV3
+      url: http://services-amx:15093/PostingService/V3?wsdl
+    - name: SOAPaymentServiceV3
+      url: http://services-amx:15113/PaymentsService/V3?wsdl
+    - name: UPay
+      url: https://upay.ipacc.com/server
+    - name: VendorFinancialEntityServiceV1
+      url: http://services-amx:15181/VendorFinancialEntityService/V1?wsdl
