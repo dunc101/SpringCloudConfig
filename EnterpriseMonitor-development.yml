@@ -84,3 +84,5 @@ appconfig:
       url: https://upay.ipacc.com/server
     - name: VendorFinancialEntityServiceV1
       url: http://services-amx:15181/VendorFinancialEntityService/V1?wsdl
+    - name: VendorFinancialEntityServiceV2
+      url: http://services-amx:15181/VendorFinancialEntityService/V2?wsdl
